@@ -1,43 +1,13 @@
-print("Mini Calculator")
+Mini Calculator - Python Project
+Welcome to the Mini Calculator project! This is a simple console-based calculator that performs basic arithmetic operations such as addition, subtraction, multiplication, and division. The program runs continuously, allowing users to input numbers and select operations until they decide to exit.
 
-def adds(num1, num2):
-    return num1 + num2
+Features:
+Addition: Adds two numbers.
 
-def subtracts(num1, num2):
-    return num1 - num2
+Subtraction: Subtracts the second number from the first.
 
-def divides(num1, num2):
-    if num2 == 0:
-        return "Cannot divide by zero!"
-    return num1 / num2
+Multiplication: Multiplies two numbers.
 
-def multiplies(num1, num2):
-    return num1 * num2
+Division: Divides the first number by the second (with error handling for division by zero).
 
-while True:
-    try:
-        num1 = float(input("Enter First Number : "))
-        num2 = float(input("Enter Second Number : "))
-        operations = input("Add / Sub / Div / Mul / Exit : ").replace(" ", "").lower()
-
-        if operations == "exit":
-            break
-        elif operations == "add":
-            result = adds(num1, num2)
-            print(f"{num1} + {num2} = {result}")
-        elif operations == "sub":
-            result = subtracts(num1, num2)
-            print(f"{num1} - {num2} = {result}")
-        elif operations == "div":
-            result = divides(num1, num2)
-            print(f"{num1} / {num2} = {result}")
-        elif operations == "mul":
-            result = multiplies(num1, num2)
-            print(f"{num1} * {num2} = {result}")
-        else:
-            print("Invalid operation. Please choose Add, Sub, Div, or Mul.")
-
-    except ValueError:
-        print("Invalid input. Please enter numbers.")
-    except Exception as e:
-        print(f"An error occurred: {e}")
+Exit: Ends the program.
